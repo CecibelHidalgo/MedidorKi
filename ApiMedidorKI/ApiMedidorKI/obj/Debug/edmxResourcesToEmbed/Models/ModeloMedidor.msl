@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbMedidorModelStoreContainer" CdmEntityContainer="dbMedidorEntities">
+    <EntitySetMapping Name="MTPersonaje">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTPersonaje">
+        <MappingFragment StoreEntitySet="MTPersonaje">
+          <ScalarProperty Name="CodigoPersonaje" ColumnName="CodigoPersonaje" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="RangoInicial" ColumnName="RangoInicial" />
+          <ScalarProperty Name="RangoFinal" ColumnName="RangoFinal" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTCategoria">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTCategoria">
+        <MappingFragment StoreEntitySet="MTCategoria">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+          <ScalarProperty Name="CodigoCategoria" ColumnName="CodigoCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTLuchador">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTLuchador">
+        <MappingFragment StoreEntitySet="MTLuchador">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="NombreLuchador" ColumnName="NombreLuchador" />
+          <ScalarProperty Name="CodigoLuchador" ColumnName="CodigoLuchador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTLuchadorPersonaje">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTLuchadorPersonaje">
+        <MappingFragment StoreEntitySet="MTLuchadorPersonaje">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoPersonaje" ColumnName="CodigoPersonaje" />
+          <ScalarProperty Name="CodigoLuchador" ColumnName="CodigoLuchador" />
+          <ScalarProperty Name="CodigoLuchadorPersonaje" ColumnName="CodigoLuchadorPersonaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTLuchadorReto">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTLuchadorReto">
+        <MappingFragment StoreEntitySet="MTLuchadorReto">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="EsEsfera" ColumnName="EsEsfera" />
+          <ScalarProperty Name="Punteo" ColumnName="Punteo" />
+          <ScalarProperty Name="CodigoReto" ColumnName="CodigoReto" />
+          <ScalarProperty Name="CodigoLuchador" ColumnName="CodigoLuchador" />
+          <ScalarProperty Name="CodigoLuchadorReto" ColumnName="CodigoLuchadorReto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTReto">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTReto">
+        <MappingFragment StoreEntitySet="MTReto">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="CodigoCategoria" ColumnName="CodigoCategoria" />
+          <ScalarProperty Name="NombreReto" ColumnName="NombreReto" />
+          <ScalarProperty Name="CodigoReto" ColumnName="CodigoReto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTUsuario">
+      <EntityTypeMapping TypeName="dbMedidorModel.MTUsuario">
+        <MappingFragment StoreEntitySet="MTUsuario">
+          <ScalarProperty Name="UsuarioModifico" ColumnName="UsuarioModifico" />
+          <ScalarProperty Name="FechaModifico" ColumnName="FechaModifico" />
+          <ScalarProperty Name="UsuarioInserto" ColumnName="UsuarioInserto" />
+          <ScalarProperty Name="FechaInserto" ColumnName="FechaInserto" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="CodigoUsuario" ColumnName="CodigoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbMedidorModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

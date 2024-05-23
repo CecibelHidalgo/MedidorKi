@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbMedidorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MTCategoria">
+    <Key>
+      <PropertyRef Name="CodigoCategoria" />
+    </Key>
+    <Property Name="CodigoCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCategoria" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTLuchador">
+    <Key>
+      <PropertyRef Name="CodigoLuchador" />
+    </Key>
+    <Property Name="CodigoLuchador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreLuchador" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTLuchadorPersonaje">
+    <Key>
+      <PropertyRef Name="CodigoLuchadorPersonaje" />
+    </Key>
+    <Property Name="CodigoLuchadorPersonaje" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoLuchador" Type="int" Nullable="false" />
+    <Property Name="CodigoPersonaje" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTLuchadorReto">
+    <Key>
+      <PropertyRef Name="CodigoLuchadorReto" />
+    </Key>
+    <Property Name="CodigoLuchadorReto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodigoLuchador" Type="int" Nullable="false" />
+    <Property Name="CodigoReto" Type="int" Nullable="false" />
+    <Property Name="Punteo" Type="int" Nullable="false" />
+    <Property Name="EsEsfera" Type="bit" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTPersonaje">
+    <Key>
+      <PropertyRef Name="CodigoPersonaje" />
+    </Key>
+    <Property Name="CodigoPersonaje" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imagen" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RangoInicial" Type="int" Nullable="false" />
+    <Property Name="RangoFinal" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTReto">
+    <Key>
+      <PropertyRef Name="CodigoReto" />
+    </Key>
+    <Property Name="CodigoReto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreReto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoCategoria" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MTUsuario">
+    <Key>
+      <PropertyRef Name="CodigoUsuario" />
+    </Key>
+    <Property Name="CodigoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+    <Property Name="Eliminado" Type="bit" Nullable="false" />
+    <Property Name="FechaInserto" Type="datetime" Nullable="false" />
+    <Property Name="UsuarioInserto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModifico" Type="datetime" />
+    <Property Name="UsuarioModifico" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__MTLuchado__Codig__2F10007B">
+    <End Role="MTLuchador" Type="Self.MTLuchador" Multiplicity="1" />
+    <End Role="MTLuchadorPersonaje" Type="Self.MTLuchadorPersonaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTLuchador">
+        <PropertyRef Name="CodigoLuchador" />
+      </Principal>
+      <Dependent Role="MTLuchadorPersonaje">
+        <PropertyRef Name="CodigoLuchador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MTLuchado__Codig__300424B4">
+    <End Role="MTPersonaje" Type="Self.MTPersonaje" Multiplicity="1" />
+    <End Role="MTLuchadorPersonaje" Type="Self.MTLuchadorPersonaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTPersonaje">
+        <PropertyRef Name="CodigoPersonaje" />
+      </Principal>
+      <Dependent Role="MTLuchadorPersonaje">
+        <PropertyRef Name="CodigoPersonaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MTLuchado__Codig__32E0915F">
+    <End Role="MTLuchador" Type="Self.MTLuchador" Multiplicity="1" />
+    <End Role="MTLuchadorReto" Type="Self.MTLuchadorReto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTLuchador">
+        <PropertyRef Name="CodigoLuchador" />
+      </Principal>
+      <Dependent Role="MTLuchadorReto">
+        <PropertyRef Name="CodigoLuchador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MTLuchado__Codig__33D4B598">
+    <End Role="MTReto" Type="Self.MTReto" Multiplicity="1" />
+    <End Role="MTLuchadorReto" Type="Self.MTLuchadorReto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTReto">
+        <PropertyRef Name="CodigoReto" />
+      </Principal>
+      <Dependent Role="MTLuchadorReto">
+        <PropertyRef Name="CodigoReto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MTReto__CodigoCa__2A4B4B5E">
+    <End Role="MTCategoria" Type="Self.MTCategoria" Multiplicity="1" />
+    <End Role="MTReto" Type="Self.MTReto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTCategoria">
+        <PropertyRef Name="CodigoCategoria" />
+      </Principal>
+      <Dependent Role="MTReto">
+        <PropertyRef Name="CodigoCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbMedidorModelStoreContainer">
+    <EntitySet Name="MTCategoria" EntityType="Self.MTCategoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTLuchador" EntityType="Self.MTLuchador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTLuchadorPersonaje" EntityType="Self.MTLuchadorPersonaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTLuchadorReto" EntityType="Self.MTLuchadorReto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTPersonaje" EntityType="Self.MTPersonaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTReto" EntityType="Self.MTReto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MTUsuario" EntityType="Self.MTUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__MTLuchado__Codig__2F10007B" Association="Self.FK__MTLuchado__Codig__2F10007B">
+      <End Role="MTLuchador" EntitySet="MTLuchador" />
+      <End Role="MTLuchadorPersonaje" EntitySet="MTLuchadorPersonaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MTLuchado__Codig__300424B4" Association="Self.FK__MTLuchado__Codig__300424B4">
+      <End Role="MTPersonaje" EntitySet="MTPersonaje" />
+      <End Role="MTLuchadorPersonaje" EntitySet="MTLuchadorPersonaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MTLuchado__Codig__32E0915F" Association="Self.FK__MTLuchado__Codig__32E0915F">
+      <End Role="MTLuchador" EntitySet="MTLuchador" />
+      <End Role="MTLuchadorReto" EntitySet="MTLuchadorReto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MTLuchado__Codig__33D4B598" Association="Self.FK__MTLuchado__Codig__33D4B598">
+      <End Role="MTReto" EntitySet="MTReto" />
+      <End Role="MTLuchadorReto" EntitySet="MTLuchadorReto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MTReto__CodigoCa__2A4B4B5E" Association="Self.FK__MTReto__CodigoCa__2A4B4B5E">
+      <End Role="MTCategoria" EntitySet="MTCategoria" />
+      <End Role="MTReto" EntitySet="MTReto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

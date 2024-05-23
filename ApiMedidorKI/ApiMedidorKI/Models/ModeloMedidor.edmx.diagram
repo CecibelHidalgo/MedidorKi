@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e8c62a84227a444aad9dd34cfce99eb7" Name="Diagram1">
+        <EntityTypeShape EntityType="dbMedidorModel.MTPersonaje" Width="1.5" PointX="1.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTCategoria" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTLuchador" Width="1.5" PointX="1.625" PointY="4" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTLuchadorPersonaje" Width="1.5" PointX="4.5" PointY="5.25" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTLuchadorReto" Width="1.5" PointX="5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTReto" Width="1.5" PointX="2.875" PointY="0.5" />
+        <EntityTypeShape EntityType="dbMedidorModel.MTUsuario" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbMedidorModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" />
+        <AssociationConnector Association="dbMedidorModel.FK__MTReto__CodigoCa__2A4B4B5E" />
+        <AssociationConnector Association="dbMedidorModel.FK__MTLuchado__Codig__2F10007B" />
+        <AssociationConnector Association="dbMedidorModel.FK__MTLuchado__Codig__32E0915F" />
+        <AssociationConnector Association="dbMedidorModel.FK__MTLuchado__Codig__300424B4" />
+        <AssociationConnector Association="dbMedidorModel.FK__MTLuchado__Codig__33D4B598" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
