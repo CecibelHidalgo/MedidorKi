@@ -8,6 +8,9 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using ApiMedidorKI.Models;
 
+ 
+ 
+ 
 
 
 namespace ApiMedidorKI.Controllers.ApiMedidor
