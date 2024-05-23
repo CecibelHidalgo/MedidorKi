@@ -82,3 +82,15 @@ C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\obj\Debug\ApiMedidorKI.
 C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\obj\Debug\ApiMedidorKI.csproj.CopyComplete
 C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\obj\Debug\ApiMedidorKI.dll
 C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\obj\Debug\ApiMedidorKI.pdb
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Cors.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Security.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Owin.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\System.Web.Cors.dll
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.xml
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Cors.xml
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Security.xml
+C:\CHIDALGO\Projects\MedidorKi\ApiMedidorKI\ApiMedidorKI\bin\Microsoft.Owin.Security.OAuth.xml

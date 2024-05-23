@@ -8,15 +8,13 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using ApiMedidorKI.Models;
 
- 
- 
- 
+
 
 
 namespace ApiMedidorKI.Controllers.ApiMedidor
 {
   
-
+    [Authorize]
     public class LuchadorController : ApiController
     {
 

@@ -8,7 +8,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using ApiMedidorKI.Models;
  
-using System.Web.Http.Cors;
+ 
  
 
 
@@ -66,6 +66,97 @@ namespace ApiMedidorKI.Controllers.ApiMedidor
                 return InternalServerError(ex);
             }
         }
+
+
+        [HttpPost]
+        [Route("Api/LuchadorReto/Eliminar")]
+        public HttpResponseMessage Eliminar(MTLuchadorReto pEntidad)
+        {
+            try
+            {
+                MTLuchadorReto entidad = db.MTLuchadorReto
+                    .Where(x => x.CodigoLuchadorReto == pEntidad.CodigoLuchadorReto && x.Eliminado == false)
+                    .FirstOrDefault();
+
+                if (entidad != null)
+                {
+                
+                    entidad.UsuarioModifico = pEntidad.UsuarioInserto;
+                    entidad.Eliminado = true;
+                    entidad.FechaModifico = DateTime.Now;
+                    entidad.Activo = false;
+                    db.SaveChanges();
+                    
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
+                }
+
+               
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("Api/LuchadorReto/Editar")]
+        public HttpResponseMessage Editar(MTLuchadorReto pEntidad)
+        {
+            try
+            {
+                MTLuchadorReto entidad = db.MTLuchadorReto
+                    .Where(x => x.CodigoLuchadorReto == pEntidad.CodigoLuchadorReto && x.Eliminado == false)
+                    .FirstOrDefault();
+
+                if (entidad != null)
+                {
+
+
+                    MTLuchadorReto itemExistenteAnterior =
+                             db.MTLuchadorReto.
+                             Where(w => w.CodigoLuchador == entidad.CodigoLuchador
+                             && w.CodigoReto == entidad.CodigoReto
+
+                             && w.Activo == false
+                             && w.Eliminado == false).FirstOrDefault();
+
+
+                    if (itemExistenteAnterior != null)
+                    {
+                        
+                        itemExistenteAnterior.FechaModifico = DateTime.Now;
+                        itemExistenteAnterior.UsuarioModifico = pEntidad.UsuarioInserto;
+
+                        db.SaveChanges();
+                    }
+
+                    entidad.Punteo = pEntidad.Punteo;
+                    entidad.EsEsfera = pEntidad.EsEsfera;
+
+                    entidad.Activo = true;
+                    entidad.Eliminado = false;
+                    entidad.UsuarioModifico = pEntidad.UsuarioInserto;
+                    entidad.FechaModifico = DateTime.Now;
+                    db.SaveChanges();
+                  
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
+                }
+ 
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
 
     }
 }
