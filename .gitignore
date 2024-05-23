@@ -3,3 +3,19 @@
 ################################################################################
 
 /ApiMedidorKI/.vs
+
+# Build results
+/ApiMedidorKI/[Dd]ebug/
+/ApiMedidorKI/[Dd]ebugPublic/
+/ApiMedidorKI/[Rr]elease/
+/ApiMedidorKI/[Rr]eleases/
+/ApiMedidorKI/x64/
+/ApiMedidorKI/x86/
+/ApiMedidorKI/[Ww][Ii][Nn]32/
+/ApiMedidorKI/[Aa][Rr][Mm]/
+/ApiMedidorKI/[Aa][Rr][Mm]64/
+/ApiMedidorKI/bld/
+/ApiMedidorKI/[Bb]in/
+/ApiMedidorKI/[Oo]bj/
+/ApiMedidorKI/[Ll]og/
+/ApiMedidorKI/[Ll]ogs/
