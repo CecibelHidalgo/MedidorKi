@@ -66,8 +66,6 @@ namespace ApiMedidorKI.Controllers.ApiMedidor
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.GetBaseException().Message);
             }
 
-
-
         }
 
     }
