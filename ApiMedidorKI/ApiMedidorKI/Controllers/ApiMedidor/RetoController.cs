@@ -30,6 +30,7 @@ namespace ApiMedidorKI.Controllers.ApiMedidor
 
             try
             {
+
                 db.Configuration.LazyLoadingEnabled = false;
                 db.Configuration.ProxyCreationEnabled = false;
 
