@@ -25,10 +25,10 @@ namespace ApiMedidorKI.Controllers
                     dbMedidorEntities db = new dbMedidorEntities();
 
                     // Validar usuario en la base de datos
-                    var usuario = db.MTUsuario.Where(x => !x.Eliminado && x.Usuario == credenciales.Usuario && x.Clave == credenciales.Contrasenia).FirstOrDefault();
+                    var usuario = db.MTUsuario.Where(x => !x.Eliminado && x.Usuario == credenciales.Usuario && x.Clave == credenciales.Clave).FirstOrDefault();
                     if (usuario != null)
                     {
-                        TokenGenerado = await GeneraToken.Generar(credenciales.UsuarioToken, credenciales.PasswordToken);
+                        TokenGenerado = await GeneraToken.Generar(credenciales.UsuarioToken, credenciales.ClaveToken);
                         if (TokenGenerado.Estado)
                         {
                             return Ok(TokenGenerado);

@@ -8,12 +8,12 @@ namespace ApiMedidorKI.Controllers
         public string Usuario { get; set; }
 
         [Required]
-        public string Contrasenia { get; set; }
+        public string Clave { get; set; }
 
         [Required]
         public string UsuarioToken { get; set; }
 
         [Required]
-        public string PasswordToken { get; set; }
+        public string ClaveToken { get; set; }
     }
 }

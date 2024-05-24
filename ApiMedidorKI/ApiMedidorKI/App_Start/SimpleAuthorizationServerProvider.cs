@@ -13,7 +13,7 @@ namespace ApiMedidorKI.App_Start
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            if (context.Password == "p$$s0rdT0j3n")
+            if (context.Password == "p@login2024")
             {
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
                 identity.AddClaim(new Claim("username", context.UserName));
