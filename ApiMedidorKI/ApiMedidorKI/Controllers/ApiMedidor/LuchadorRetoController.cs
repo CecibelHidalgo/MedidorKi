@@ -14,6 +14,7 @@ using ApiMedidorKI.Models;
 
 namespace ApiMedidorKI.Controllers.ApiMedidor
 {
+  
     public class LuchadorRetoController : ApiController
     {
         private dbMedidorEntities db = new dbMedidorEntities();
@@ -23,6 +24,8 @@ namespace ApiMedidorKI.Controllers.ApiMedidor
 
             db = new dbMedidorEntities();
         }
+
+
 
 
         [HttpPost]
@@ -157,6 +160,56 @@ namespace ApiMedidorKI.Controllers.ApiMedidor
             }
         }
 
+        [HttpGet]
+        public HttpResponseMessage ListarDetalle()
+        {
+            try
+            {
+                db.Configuration.LazyLoadingEnabled = false;
+                db.Configuration.ProxyCreationEnabled = false;
+
+                var query = (from luchadorReto in db.MTLuchadorReto
+                             join luchador in db.MTLuchador
+                             on luchadorReto.CodigoLuchador equals luchador.CodigoLuchador
+                             where luchadorReto.Activo == true && luchadorReto.Eliminado == false
+                             join Treto in db.MTReto
+                             on luchadorReto.CodigoReto equals Treto.CodigoReto
+                             where Treto.Eliminado == false && Treto.Activo == true
+                             join categoria in db.MTCategoria
+                             on Treto.CodigoCategoria equals categoria.CodigoCategoria
+                             where categoria.Activo && !categoria.Eliminado
+
+                             select new
+                             {
+                                 CodigoLuchador = luchadorReto.CodigoLuchador,
+                                 NombreLuchador = luchador.NombreLuchador,
+                                 CodigoCategoria = Treto.CodigoCategoria,
+                                 Categoria = categoria.NombreCategoria,
+                                 CodigoReto = luchadorReto.CodigoReto,
+                                 NombreReto = Treto.NombreReto,
+                                 Punteo = luchadorReto.Punteo,
+                                 EsEsfera = luchadorReto.EsEsfera == true ? 1 : 0
+
+
+                             }).ToList();
+
+
+                if (query != null && query.Count() > 0)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, query);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.GetBaseException().Message);
+            }
+        }
 
     }
 }
